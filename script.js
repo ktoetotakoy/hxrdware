@@ -135,6 +135,12 @@ function initSpotifyPlayer() {
 }
 
 function initTiltEffect() {
+  if (
+      window.matchMedia("(hover: none)").matches ||
+      window.matchMedia("(pointer: coarse)").matches
+    ) {
+      return;
+    }
   const card = document.querySelector(".profile-card");
   if (!card) return;
 

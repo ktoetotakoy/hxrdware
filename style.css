@@ -6,8 +6,8 @@ body {
   min-height: 97vh;
   overflow: hidden;
   background: #111;
+  cursor: none;
 }
-
 .transition { transition: all 0.3s ease; }
 .icon { width: 18px; height: 18px; margin-right: 8px; vertical-align: middle; }
 .name-icon { height: 1.2em; margin: 7px 0 5px 2px; transition: transform 0.5s ease; }
@@ -69,6 +69,7 @@ body {
   background: transparent;
   transition: all 0.3s ease;
   position: relative;
+  cursor: none;
 }
 .prosmotr {font-family: 'Jura'};
 .prosmotr { background: #ffffff0c; }
@@ -352,6 +353,7 @@ body {
 }
 
 .loading-overlay {
+    cursor: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -373,6 +375,7 @@ body {
   .loading-overlay.active {
     opacity: 1;
     visibility: visible;
+    cursor: none;
   }
   
   .loading-content {

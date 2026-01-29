@@ -37,8 +37,8 @@
           <img src="https://i.pinimg.com/736x/a9/35/3a/a9353af6583666263d16f98011c18576.jpg" alt="Profile Image">
         </div>
         <h1>
-          <a class="nickname" href="#">hxrdware</a>
-          <a href="#" class="tooltip" data-tooltip="Verified">
+          <a class="nickname">hxrdware</a>
+          <a class="tooltip" data-tooltip="Verified">
             <img class="name-icon" src="https://i.gifer.com/3V3X.gif" alt="Verification Icon">
           </a>
         </h1>
@@ -101,5 +101,86 @@
 </div>
 
 <script src="script.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      
+      const css = `
+          body, html { cursor: none !important; }
+          a, button, input, textarea, label, [role="button"], .btn, .button { cursor: none !important; }
+          
+          #my-custom-cursor {
+              position: fixed;
+              top: 0; left: 0;
+              z-index: 999999;
+              pointer-events: none;
+              border-radius: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              transform: translate3d(-50%, -50%, 0);
+              transition: width 0.2s ease, height 0.2s ease, background-color 0.2s, border 0.2s;
+              width: 28px;
+              height: 28px;
+              background-color: rgba(255, 255, 255, 0);
+              border: 2px solid #ffffff;
+          }
+  
+          #my-cursor-dot {
+              border-radius: 50%;
+              transition: all 0.2s;
+              width: 2px;
+              height: 2px;
+              background-color: #ffffff00;
+          }
+  
+          #my-custom-cursor.hovered {
+              width: 50px;
+              height: 50px;
+              background-color: rgba(255, 0, 0, 0);
+              border: 2px solid #ffffff;
+          }
+          
+          #my-custom-cursor.hovered #my-cursor-dot {
+              width: 2px;
+              height: 2px;
+              background-color: #ffffff00;
+          }
+      `;
+  
+      const styleSheet = document.createElement("style");
+      styleSheet.innerText = css;
+      document.head.appendChild(styleSheet);
+  
+      const cursor = document.createElement('div');
+      cursor.id = 'my-custom-cursor';
+      const dot = document.createElement('div');
+      dot.id = 'my-cursor-dot';
+      cursor.appendChild(dot);
+      document.body.appendChild(cursor);
+  
+      const moveCursor = (e) => {
+          cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0) translate(-50%, -50%)`;
+      };
+  
+      window.addEventListener('mousemove', moveCursor);
+  
+      const addHover = () => cursor.classList.add('hovered');
+      const removeHover = () => cursor.classList.remove('hovered');
+  
+      const targets = 'a, button, input[type="submit"], input[type="button"], [role="button"], .btn, .button, .cta, .elementor-button';
+      
+      document.body.addEventListener('mouseover', (e) => {
+          if (e.target.closest(targets)) {
+              addHover();
+          }
+      });
+  
+      document.body.addEventListener('mouseout', (e) => {
+          if (e.target.closest(targets)) {
+              removeHover();
+          }
+      });
+  });
+  </script>
 </body>
 </html>
