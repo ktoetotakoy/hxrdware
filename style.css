@@ -473,9 +473,9 @@ body {
     object-fit: cover;
     z-index: 0;
     pointer-events: none;
-    opacity: 88%;
+    opacity: 100%;
     transition: opacity 0.5s ease-in-out;
-    filter: brightness(0.6);
+    filter: brightness(1);
   }
   
   /* Класс для плавного появления видео */

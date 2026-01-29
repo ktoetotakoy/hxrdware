@@ -24,11 +24,11 @@ function restartVideo() {
 // Spotify Player functionality
 function initSpotifyPlayer() {
   const TRACK = {
-    title: "who was",
-    artist: "Wido",
-    explicit: true,
-    cover: "https://images.genius.com/20fe3a39058a49abae4eadea4ee86e5a.1000x1000x1.png",
-    audio: "whowas.mp3"
+    title: "apathy",
+    artist: "Øneheart",
+    explicit: false,
+    cover: "https://images.genius.com/471fb0440fc67bcbb1fe58664f33257b.1000x1000x1.jpg",
+    audio: "apathy.mp3"
   };
 
   const audio = document.getElementById('audio');
@@ -62,7 +62,7 @@ function initSpotifyPlayer() {
   });
 
   audio.src = TRACK.audio;
-  audio.volume = 0.20;
+  audio.volume = 0.90;
 
   let isPlaying = false;
 
@@ -270,7 +270,7 @@ function initLoadingOverlay() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  loadVideo('270940_small.mp4');
+  loadVideo('video.mp4');
   initVisitsCounter();
   initSpotifyPlayer();
   initTiltEffect();
