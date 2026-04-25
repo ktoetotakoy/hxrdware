@@ -24,11 +24,11 @@ function restartVideo() {
 // Spotify Player functionality
 function initSpotifyPlayer() {
   const TRACK = {
-    title: "apathy",
-    artist: "Øneheart",
+    title: "star shopping (prod. kryptik)",
+    artist: "Lil Peep",
     explicit: false,
-    cover: "https://images.genius.com/471fb0440fc67bcbb1fe58664f33257b.1000x1000x1.jpg",
-    audio: "apathy.mp3"
+    cover: "https://upload.wikimedia.org/wikipedia/en/7/74/Lil_Peep_-_Star_Shopping.jpg",
+    audio: "sp.mp3"
   };
 
   const audio = document.getElementById('audio');
@@ -62,7 +62,7 @@ function initSpotifyPlayer() {
   });
 
   audio.src = TRACK.audio;
-  audio.volume = 0.90;
+  audio.volume = 0.60;
 
   let isPlaying = false;
 
