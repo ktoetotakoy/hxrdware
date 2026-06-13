@@ -24,11 +24,11 @@ function restartVideo() {
 // Spotify Player functionality
 function initSpotifyPlayer() {
   const TRACK = {
-    title: "star shopping (prod. kryptik)",
-    artist: "Lil Peep",
+    title: "Innocence",
+    artist: "Daniel Caesar",
     explicit: false,
-    cover: "https://upload.wikimedia.org/wikipedia/en/7/74/Lil_Peep_-_Star_Shopping.jpg",
-    audio: "sp.mp3"
+    cover: "https://i.audiomack.com/orgilonerdenejargal2/204fdb155e.webp?width=360",
+    audio: "song.mp3"
   };
 
   const audio = document.getElementById('audio');
